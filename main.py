@@ -38,7 +38,7 @@ def register():
 
 #THIS IS FOR EMAIL
     if email != "":                                                                         #if the email field is not left blank...do the following
-        if not 20 >=len(email) >= 3 or " " in email or email.count("@")>= 1 or email.count(".")>=1:
+        if not 20 >=len(email) >= 3 or " " in email or email.count("@")> 1 or email.count(".")>1:
             email_error = "Please enter a vaild email address"
 
     
