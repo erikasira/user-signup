@@ -26,20 +26,20 @@ def register():
 
 #THIS IS FOR THE USERNAME ERROR
     if not 20 >= len(username) >= 3 or " " in username:         # if the username is greater than 20 characters or less than three, or there is a space                
-        username_error = "Please enter a valid username."       # it will produce an error message
+        username_error = "Please enter a valid username. Username should be between 3-20 characters and cannot contain any spaces or periods."       # it will produce an error message
 
 #THIS IS FOR THE PASSWORD ERROR
     if not 20 >= len(password) >= 3 or " " in password:
-        password_error = "Please enter a valid password."       
+        password_error = "Please enter a valid password. Password should be between 3-20 characters and cannot contain any spaces or periods."       
 
 #THIS IS FOR VERIFYING THE PASSWORD
     if verify != password:                                  
-        verify_error = "Please enter a valid password"
+        verify_error = "Password does not match."
 
 #THIS IS FOR EMAIL
     if email != "":                                                                         #if the email field is not left blank...do the following
         if not 20 >=len(email) >= 3 or " " in email or email.count("@")> 1 or email.count(".")>1:
-            email_error = "Please enter a vaild email address"
+            email_error = "Please enter a vaild email address. Email address should be between 3-20 characters and cannot contain any spaces. Must only have 1 '@' and 1 period."
 
     
     if not username_error and not password_error and not verify_error and not email_error:                      #if there is no error in the username send them to the correct page                                                                    
